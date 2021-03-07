@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ;
+    <link rel="stylesheet" href="style.css">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1 class="title"> random quote generator</h1>
+    <p class="creator">created by : Adam pacifico</p>
+    <div id="quote-box">
+
+        <div id="text"></div>
+        <div id="author"></div>
+
+        <div class="btns">
+            <button id="new-quote" onclick="genQuote()"> New Quote</button>
+            <div><a href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22You%20can%E2%80%99t%20fall%20if%20you%20don%E2%80%99t%20climb.%20%20But%20there%E2%80%99s%20no%20joy%20in%20living%20your%20whole%20life%20on%20the%20ground.%22%20Unknown"
+                    id="tweet-quote"><i class="fa fa-twitter"></i></a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+        window.onload = init;
+        function init() {
+            genQuote();
+        }
+        function genQuote() {
+
+            let randomIndex = Math.floor(Math.random() * quoteBank.length);
+            console.log(randomIndex);
+            document.getElementById("text").innerText = "'' " + quoteBank[randomIndex].quote + " ''";
+            document.getElementById("author").innerText = quoteBank[randomIndex].author;
+        }
+
+        const quoteBank = [{
+            quote: "The world isn't perfect. But it's there for us, doing the best it can....that's what makes it so damn beautiful.",
+            author: "~ Roy Mustang (Full Metal Alchemist)"
+        },
+        {
+            quote: "To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have.",
+            author: "~ Matsumoto Rangiku (Bleach)"
+        },
+        {
+            quote: "Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!",
+            author: "~ Don Quixote Doflamingo (One Piece)  "
+        },
+        {
+            quote: "Whatever you lose, you'll find it again. But what you throw away you'll never get back.",
+            author: "~ Kenshin Himura (Rurouni Kenshin: Meiji Kenkaku Romantan)"
+        },
+        {
+            quote: "I am the hope of the universe. I am the answer to all living things that cry out for peace. I am protector of the innocent. I am the light in the darkness. I am truth. Ally to good! Nightmare to you!",
+            author: "~ Son Goku (Dragon Ball Z)"
+        }
+
+        ]
+
+
+    </script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

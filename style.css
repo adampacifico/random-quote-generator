@@ -1,0 +1,87 @@
+* {
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+body {
+    background-color: saddlebrown;
+}
+
+#quote-box {
+    /* display: ; */
+    margin: 20px auto;
+    text-align: center;
+    background: url('images/bgpaper.jpg');
+    padding: 20px;
+
+}
+
+#text {
+    margin: 20px auto;
+    font-size: 3rem;
+}
+
+.btns #new-quote {
+    margin: auto 20px;
+    padding: 15px;
+    width: 150px;
+    margin-top: 10px;
+    background-color:saddlebrown ;
+    color: white;
+    border: none;
+}
+#new-quote:hover{
+    background-color:rgb(148, 84, 38) ;
+}
+a {
+    text-decoration: none;
+    font-size: 50px;
+
+}
+
+.fa-twitter {
+    font-size: 40px;
+    margin: 5px 0px 0 30px;
+    padding: 3px;
+    color: saddlebrown;;
+    align-self: right;
+    cursor: pointer;
+}
+
+.fa-twitter:hover {
+    color: #007bff;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 4rem;
+    color: white;
+    padding: 5px;
+}
+.creator{
+    font-size: 1.1rem;
+    padding-top: -10px;
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+@media (max-width: 500px){
+    #text {
+        font-size: 1rem;
+    }
+    .title{
+    
+        font-size: 2rem;
+ 
+    }
+}
